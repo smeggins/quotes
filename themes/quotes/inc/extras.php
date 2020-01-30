@@ -40,3 +40,23 @@ add_action( 'wp_before_admin_bar_render', 'qod_admin_bar_render' );
 	remove_meta_box( 'trackbacksdiv', 'post', 'normal' );
 }
 add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
+
+// Generate random post id to be sent to client
+
+function get_random_quote_array() {
+	$args = array(
+		'numberposts' => 1,
+		'orderby' => 'rand',
+		'order' => 'ASC',
+	);
+
+	$post_ids = get_posts( $args );
+
+	foreach ($post_ids as $val) {
+		$content = $val->post_content;
+		$title = $val->post_title;
+	};
+
+	$quote = array($content, $title);
+	return $quote;
+}

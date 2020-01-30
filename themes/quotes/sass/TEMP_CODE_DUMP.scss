@@ -2,15 +2,18 @@
 
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     color: #fff;
+    padding: 0px .5rem;
+    font-family: 'Exo';
 }
 
 main {
     max-width: $window__maxwidth;
     font-size: $font__base-size;
     line-height: $font__line-height-body;
+    text-align: center;
 }
 
 a {
@@ -24,8 +27,33 @@ ul {
     padding: 0px;
 }
 
+// article {
+
+//     .user-input {
+//         display: flex;
+//         flex-direction: column;
+//         text-align: initial;
+
+//         p {
+//             text-align: initial;
+//         }
+//     }
+// }
+
 .green-branding {
     color: $color__green-branding;
+}
+
+.entry-div {
+    text-align: center;
+}
+
+.entry-content {
+    text-align: center;
+
+    p {
+        font-size: 1rem;
+    }
 }
 
 // header
@@ -37,7 +65,8 @@ header {
 
 .logo {
     width: 100%;
-    margin: 0px .5rem;
+    margin: 4rem 0rem 1rem 0rem;
+
 
     a {
         width: 100%;
@@ -75,6 +104,10 @@ footer {
             list-style-type: none;
 
             border-right: 1px solid #fff;
+
+            &:last-child {
+                border-right: 0px;
+            }
         }
     }
 }
@@ -82,6 +115,7 @@ footer {
 .external-link {
 
     @include branded-a;
+    text-align: center;
     
     p {
         padding: 0px 1rem;
@@ -104,6 +138,7 @@ footer {
     p{
         @include branded-a;
         text-align: center;
+        font-weight: normal;
 
         img {
             width: 1rem;
@@ -111,11 +146,15 @@ footer {
     }  
 }
 
+// archive
+
 .cats {
     max-width: 100%;
+    text-align: center;
     
     h2 {
-        font-size: 2rem;
+        font-size: 1.5em;
+        margin-top: 3rem;
     }
 
     ul {
@@ -134,8 +173,40 @@ footer {
             }
         }
     }
+}  
+
+// front-page
+
+button {
+    background-color: transparent;
+    border: 2px solid #0c0;
+    text-shadow: unset;
+    box-shadow: unset;
+    padding: .75rem 2.25rem;
+    font-family: Exo, serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 3rem;
+
+    &:focus {
+        outline: none;
+    }
 }
 
-.tags {
+.quote-content p {
+    font-size: 1.25rem;
+}
 
-}   
+article {
+    font-size: 1.25rem;
+}
+
+.quote-title {
+    text-align: center;
+}
+
+// submit a quote
+
+.mandatory {
+    color: red;
+}

@@ -7,7 +7,7 @@
 
 				<?php get_template_part( 'template-parts/content', 'front-page' ); ?>
 
-			<?php endwhile; // End of the loop. ?>
+            <?php endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

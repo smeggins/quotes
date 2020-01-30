@@ -23,14 +23,14 @@ get_header(); ?>
 
             <div class="cats">
                 <h2> categories </h2>
-                <ul class="categories-container">
+                <ul class="categories-container mobile-container">
                     <?php wp_list_categories( 'title_li' ) ?>
                 </ul>
             </div>
             
             <div class="cats">
                 <h2> tags </h2>
-                <ul class="tags-container">
+                <ul class="tags-container mobile-container">
                     <?php 
                     $args = array('taxonomy' => 'post_tag', 'hide_empty' => true, 'title_li' => __( '' ) );
                     wp_list_categories( $args ) 
