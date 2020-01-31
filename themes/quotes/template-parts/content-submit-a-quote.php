@@ -14,20 +14,20 @@
 
     <form method="post" class="user-input">
         <div class="name-input">
-            <p>first name <span class="mandatory">*</span></p>
-            <input name="first name">
-            <p>last name <span class="mandatory">*</span></p>
-            <input name="last name">
+            <p>first name</p>
+            <input name="first_name">
+            <p>last name</p>
+            <input name="last_name">
         </div>
-        <p>email <span class="mandatory">*</span></p>
+        <p>email</p>
         <input name="email">
         <p>quote author <span class="mandatory">*</span></p>
-        <input name="quote author">
+        <input class="quoteAuthor" name="quote_author">
         <p>quote <span class="mandatory">*</span></p>
-        <textarea name="quote" class="user-input-message" cols="40" rows="10"></textarea>
+        <textarea name="quote" class="quoteContent" cols="40" rows="10"></textarea>
     </form>
 
-    <button type='button' id='submit-quote-button' class="green-branding">Submit</button>
+    <button type='button' id='submit-quote-button' class="green-branding" >Submit</button>
             
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

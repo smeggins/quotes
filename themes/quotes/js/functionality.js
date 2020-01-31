@@ -20,4 +20,31 @@
             });
         })
 
+        
+
+    $('#submit-quote-button').click(function() {
+            
+        $.ajax({
+            method: 'POST',
+            url: functionVars.quotes_url + 'wp/v2/posts/',
+            
+            data: {
+                title: $('.quoteAuthor').val(),
+                content: $('.quoteContent').val(),
+                status: 'publish'
+            },
+
+            success: console.log('ya, ya did it'),
+
+            beforeSend: function(xhr) {
+                xhr.setRequestHeader('X-WP-Nonce', functionVars.quotes_nonce);
+                }
+        }).done (function() {
+            console.log('submit button ajax request completed')
+        });
+    })
+
+
+
 })(jQuery);
+
