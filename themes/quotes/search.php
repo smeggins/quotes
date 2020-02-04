@@ -1,9 +1,4 @@
 <?php
-/**
- * The template for displaying search results pages.
- *
- * @package QOD_Starter_Theme
- */
 
 get_header(); ?>
 
@@ -12,9 +7,9 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+			<div class="page-header">
+				<h1 class="page-title search-results-title"><?php printf( esc_html( 'Search Results for: %s' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</div><!-- .page-header -->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

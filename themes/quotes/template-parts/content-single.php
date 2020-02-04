@@ -1,22 +1,21 @@
-<?php
-/**
- * Template part for displaying single posts.
- *
- * @package QOD_Starter_Theme
- */
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
-		<?php endif; ?>
+<div class="entry-content">
+	<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+			'after'  => '</div>',
+		) );
+	?>
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<?php $quote = get_random_quote_array(); ?>
+		<article class = 'random-quote'>      
+					<div class = "quote-content"><?php the_content(); ?></div>
+					<div class = "quote-title">- <?php the_title(); ?></div>
+		</article>
 
-	<div class="entry-content">
-		<?php the_content(); ?>
-	</div><!-- .entry-content -->
-</article><!-- #post-## -->
+	<button type='button' id='random-quote-button' class="green-branding">Show Me Another!</button>
+
+</div><!-- .entry-content -->
+</div><!-- #post-## -->

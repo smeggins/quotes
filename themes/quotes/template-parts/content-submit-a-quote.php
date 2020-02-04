@@ -11,23 +11,25 @@
 	<div class="entry-div">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</div><!-- .entry-div -->
-
+    <?php if (is_user_logged_in() == true) { ?>
     <form method="post" class="user-input">
-        <div class="name-input">
-            <p>first name</p>
-            <input name="first_name">
-            <p>last name</p>
-            <input name="last_name">
-        </div>
-        <p>email</p>
-        <input name="email">
-        <p>quote author <span class="mandatory">*</span></p>
-        <input class="quoteAuthor" name="quote_author">
+            <div>
+                <p>quote author <span class="mandatory">*</span></p>
+                <input class="quoteAuthor" name="quote_author">
+            </div>
         <p>quote <span class="mandatory">*</span></p>
         <textarea name="quote" class="quoteContent" cols="40" rows="10"></textarea>
     </form>
 
     <button type='button' id='submit-quote-button' class="green-branding" >Submit</button>
+
+    <?php 
+    }else {
+        echo '<h3> You must log-in to create a post </h3>';
+        echo '<button type="button" id="log-in" class="green-branding" onclick = "window.location.href = `http://localhost/quotes/wp-admin/`">Log-in</button>';
+    }
+    
+    ?>
             
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->

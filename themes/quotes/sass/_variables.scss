@@ -1,5 +1,6 @@
 // Structure
 
+$window__maxwidth: 1080px;
 $base__space-unit: 1.5rem;
 
 // Colors
@@ -33,6 +34,5 @@ $font__family-main: Exo Web;
 
 // Screen Size Break-points
 
-$screen__tablet: 600px;
-$screen__desktop: 992px;
-$window__maxwidth: 1080px
+$screen__tablet: 620px;
+$screen__desktop: 1080px;
