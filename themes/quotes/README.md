@@ -1,23 +1,40 @@
-# Quotes on Dev Starter
+![Alt text](/Applications/MAMP/htdocs/quotes/wp-content/themes/quotes/assets/Quotes)
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+# Quotes On Dev
 
-## Installation
+Quotes is a site that allows you to view and upload quotes
 
-### 1. Download me (don't clone me!)
+## Technologies Used
 
-Then add me to your `wp-content/themes` directory.
+HTML, CSS, JavaScript, NPM, NODE, 
+Gulp: Terser, Rename, BrowserSync, Eslint, Sass, AutoPrefixer, cssnano
+Wordpress
+ajax
 
-### 2. Rename the `quotesondev-starter-master` directory
+### Personal Learnings
 
-Make sure that the theme directory name is project appropriate! Do you need `starter` or `master` in the directory name?
+I have a deeper understanding of wordpress. Specifically using an ajax request to access the wordpress REST enviroment to pass information to and from my SQL database and effect wordpress in a fundamental way.
 
-### 3. Install the dev dependencies
+## Built With
 
-Next you'll need to run `npm install` **inside your theme directory** to install the npm packages you'll need for Gulp, etc.
+* Javascript
+* HTML
+* CSS
+* NODE
+* NPM
+* WORDPRESS
+* AJAX
 
-### 4. Update the proxy in `gulpfile.js`
+## Authors
 
-Lastly, be sure to update your `gulpfile.js` with the appropriate URL for the Browsersync proxy (so change `localhost[:port-here]/[your-dir-name-here]` to the appropriate localhost URL).
+* **Phillip (Smeggins) Chadwick** - Main Author, Primary Programmer
 
-And now would be a good time to `git init` :)
+## License
+
+This project is un-licenced and free to use in any way
+
+## Acknowledgments
+
+* Red Academy
+* My Fellow Students
+* My instructor Anvit
