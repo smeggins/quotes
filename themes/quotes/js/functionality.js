@@ -31,6 +31,11 @@
 
         if ($.trim($('.quoteContent').val()) === '') {
             $('#quoteError').html('<br>* please enter a quote')
+
+            if($('#quoteError').hasClass('success')) {
+                $('#quoteError').removeClass('success')
+                $('#quoteError').addClass('mandatory')
+            }
         }
         else {
             $('#quoteError').removeClass('mandatory')
@@ -40,6 +45,11 @@
 
         if ($.trim($('.quoteAuthor').val()) === '') {
             $('#authorError').html('<br>* please enter an author')
+
+            if($('#authorError').hasClass('success')) {
+                $('#authorError').removeClass('success')
+                $('#authorError').addClass('mandatory')
+            }
         }
         else {
             $('#authorError').addClass('success')

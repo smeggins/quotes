@@ -1,0 +1,47 @@
+button {
+    background-color: transparent;
+    border: 2px solid #0c0;
+    text-shadow: unset;
+    box-shadow: unset;
+    padding: .75rem 2.25rem;
+    font-family: Exo, serif;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 3rem;
+    outline: none;
+
+    &:focus {
+        outline: none;
+        border-color: initial;
+        box-shadow: unset;
+    }
+
+    &:active {
+        border-color: initial;
+        box-shadow: unset;
+    }
+
+    @include tablet {
+        font-size: 1.25rem;
+    }
+}
+
+.quote-content p {
+    font-size: 1.25rem;
+
+    @include tablet {
+        font-size: 1.75rem;
+    }
+
+    @include desktop {
+        font-size: 2.5rem;
+    }
+}
+
+article {
+    font-size: 1.25rem;
+}
+
+.quote-title {
+    text-align: center;
+}

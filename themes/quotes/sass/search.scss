@@ -1,0 +1,42 @@
+.search-results-title {
+    border-bottom: 1px, white, dotted;
+    padding-bottom: 1.5rem;
+}
+
+.search-form {
+
+    input {
+        border: 2px solid $color__green-branding;
+        color: #fff;
+        background-color: transparent;
+        width: 80%;
+        max-width: 240px;
+
+        &:focus {
+            color: inherit;
+        }
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+
+    button {
+        border: 0px;
+        padding: 0px 0px 0px .5rem;
+
+        @include tablet {
+            font-size: 1.25rem;
+        }
+    }
+}
+
+.error {
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.hidden {
+    display: none;
+}

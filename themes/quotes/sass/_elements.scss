@@ -15,7 +15,20 @@ html {
 }
 
 body {
-  background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding: 0px .5rem;
+  font-family: 'Exo';
+}
+
+main {
+  max-width: $window__maxwidth;
+  font-size: $font__base-size;
+  line-height: $font__line-height-body;
+  text-align: center;
 }
 
 blockquote,
@@ -42,6 +55,8 @@ ol {
 
 ul {
   list-style: disc;
+  margin: 0px;
+  padding: 0px;
 }
 
 ol {
@@ -70,4 +85,19 @@ img {
 table {
   margin: 0 0 $base__space-unit;
   width: 100%;
+}
+
+a {
+  &:after {
+      text-decoration: none;
+  
+  &:visited {
+      text-decoration: none;
+      color: $color__green-branding;
+  }
+  }
+}
+
+fieldset {
+  border: 0px;
 }

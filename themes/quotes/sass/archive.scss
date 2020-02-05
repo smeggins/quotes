@@ -1,0 +1,45 @@
+.category-tag {
+    border-bottom: 1px white dotted;
+    padding-bottom: 3rem;
+}
+
+.archive-title {
+    width: 100%;
+    border-bottom: 1px white dotted;
+    padding-bottom: 2rem;
+}
+
+.cats {
+    max-width: 100%;
+    text-align: center;
+    
+    h2 {
+        font-size: 1.5em;
+        margin-top: 3rem;
+    }
+
+    ul {
+
+
+        li {
+            display: unset;
+            list-style-type: none;
+            line-height: 2rem;
+            margin-right: 1rem;
+
+            a {
+                text-decoration: none;
+                color: $color__green-branding;
+
+                @include tablet {
+                    font-size: 1.25rem;
+                }
+
+                @include desktop {
+                    font-size: 1.5rem;
+                }
+
+            }
+        }
+    }
+}

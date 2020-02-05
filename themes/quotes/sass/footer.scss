@@ -1,0 +1,50 @@
+footer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+
+    @include tablet {
+
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.footer-nav {
+
+    @include branded-a;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        
+        li {
+            margin: 0px;
+            padding: 0px 1rem;
+            list-style-type: none;
+
+            border-right: 1px solid #fff;
+
+            &:last-child {
+                border-right: 0px;
+            }
+        }
+    }
+}
+
+.external-link {
+
+    @include branded-a;
+    text-align: center;
+    
+    p {
+        padding: 0px 1rem;
+
+        @include tablet {
+
+            margin: 0px;
+        }
+    }
+}

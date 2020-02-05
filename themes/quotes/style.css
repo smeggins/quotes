@@ -348,7 +348,25 @@ html {
 
 body {
   background: #222222;
-  /* Fallback for when there is no custom background color defined. */ }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  padding: 0px .5rem;
+  font-family: 'Exo'; }
+
+main {
+  max-width: 1080px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center; }
 
 blockquote,
 q {
@@ -369,7 +387,9 @@ ol {
   margin: 0 0 1.5rem 3rem; }
 
 ul {
-  list-style: disc; }
+  list-style: disc;
+  margin: 0px;
+  padding: 0px; }
 
 ol {
   list-style: decimal; }
@@ -394,6 +414,15 @@ img {
 table {
   margin: 0 0 1.5rem;
   width: 100%; }
+
+a:after {
+  text-decoration: none; }
+  a:after:visited {
+    text-decoration: none;
+    color: #00cc00; }
+
+fieldset {
+  border: 0px; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -660,59 +689,6 @@ button:active {
   clear: both;
   margin: 0 0 1.5rem; }
 
-/*--------------------------------------------------------------
-# Media
---------------------------------------------------------------*/
-.page-content .wp-smiley,
-.entry-content .wp-smiley,
-.comment-content .wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0; }
-
-/* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
-  max-width: 100%; }
-
-/*--------------------------------------------------------------
-# Page Templates
---------------------------------------------------------------*/
-/* All Archives Page */
-/* Submit a Quote Page */
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #fff;
-  padding: 0px .5rem;
-  font-family: 'Exo'; }
-
-main {
-  max-width: 1080px;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center; }
-
-a:after {
-  text-decoration: none; }
-  a:after:visited {
-    text-decoration: none;
-    color: #00cc00; }
-
-ul {
-  margin: 0px;
-  padding: 0px; }
-
 .content-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -773,9 +749,6 @@ ul {
 .green-branding {
   color: #00cc00; }
 
-fieldset {
-  border: 0px; }
-
 .entry-div {
   text-align: center; }
 
@@ -790,26 +763,153 @@ fieldset {
     .quotations {
       display: initial; } }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%; }
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0; }
 
-.logo {
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%; }
+
+/*--------------------------------------------------------------
+# Page Templates
+--------------------------------------------------------------*/
+/* All Archives Page */
+/* Submit a Quote Page */
+.category-tag {
+  border-bottom: 1px white dotted;
+  padding-bottom: 3rem; }
+
+.archive-title {
   width: 100%;
-  margin: 4rem 0rem 1rem 0rem;
-  max-width: 500px; }
-  .logo a {
-    width: 100%; }
-  .logo img {
-    width: 100%; }
+  border-bottom: 1px white dotted;
+  padding-bottom: 2rem; }
+
+.cats {
+  max-width: 100%;
+  text-align: center; }
+  .cats h2 {
+    font-size: 1.5em;
+    margin-top: 3rem; }
+  .cats ul li {
+    display: unset;
+    list-style-type: none;
+    line-height: 2rem;
+    margin-right: 1rem; }
+    .cats ul li a {
+      text-decoration: none;
+      color: #00cc00; }
+      @media screen and (min-width: 620px) {
+        .cats ul li a {
+          font-size: 1.25rem; } }
+      @media screen and (min-width: 1080px) {
+        .cats ul li a {
+          font-size: 1.5rem; } }
+
+.search-results-title {
+  border-bottom: 1px, white, dotted;
+  padding-bottom: 1.5rem; }
+
+.search-form input {
+  border: 2px solid #00cc00;
+  color: #fff;
+  background-color: transparent;
+  width: 80%;
+  max-width: 240px; }
+  .search-form input:focus {
+    color: inherit; }
+  @media screen and (min-width: 620px) {
+    .search-form input {
+      font-size: 1.25rem; } }
+
+.search-form button {
+  border: 0px;
+  padding: 0px 0px 0px .5rem; }
+  @media screen and (min-width: 620px) {
+    .search-form button {
+      font-size: 1.25rem; } }
+
+.error {
+  color: red;
+  text-transform: uppercase;
+  font-size: 1.25rem; }
+
+.hidden {
+  display: none; }
+
+.mandatory {
+  color: red; }
+
+.success {
+  color: lightgreen; }
+
+textarea {
+  max-width: 370px; }
+  @media screen and (min-width: 620px) {
+    textarea {
+      width: 100%;
+      max-width: unset; } }
+
+button {
+  background-color: transparent;
+  border: 2px solid #0c0;
+  text-shadow: unset;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  padding: .75rem 2.25rem;
+  font-family: Exo, serif;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 3rem;
+  outline: none; }
+  button:focus {
+    outline: none;
+    border-color: initial;
+    -webkit-box-shadow: unset;
+            box-shadow: unset; }
+  button:active {
+    border-color: initial;
+    -webkit-box-shadow: unset;
+            box-shadow: unset; }
+  @media screen and (min-width: 620px) {
+    button {
+      font-size: 1.25rem; } }
+
+.quote-content p {
+  font-size: 1.25rem; }
+  @media screen and (min-width: 620px) {
+    .quote-content p {
+      font-size: 1.75rem; } }
   @media screen and (min-width: 1080px) {
-    .logo {
-      max-width: 700px; } }
+    .quote-content p {
+      font-size: 2.5rem; } }
+
+article {
+  font-size: 1.25rem; }
+
+.quote-title {
+  text-align: center; }
+
+.page h1 {
+  margin-bottom: 0rem; }
+
+.page p {
+  text-align: center;
+  font-weight: normal; }
+  .page p a {
+    color: #00cc00;
+    text-decoration: none; }
+  .page p img {
+    width: 1rem; }
 
 footer {
   display: -webkit-box;
@@ -864,128 +964,23 @@ footer {
       .external-link p {
         margin: 0px; } }
 
-.page h1 {
-  margin-bottom: 0rem; }
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
 
-.page p {
-  text-align: center;
-  font-weight: normal; }
-  .page p a {
-    color: #00cc00;
-    text-decoration: none; }
-  .page p img {
-    width: 1rem; }
-
-.cats {
-  max-width: 100%;
-  text-align: center; }
-  .cats h2 {
-    font-size: 1.5em;
-    margin-top: 3rem; }
-  .cats ul li {
-    display: unset;
-    list-style-type: none;
-    line-height: 2rem;
-    margin-right: 1rem; }
-    .cats ul li a {
-      text-decoration: none;
-      color: #00cc00; }
-      @media screen and (min-width: 620px) {
-        .cats ul li a {
-          font-size: 1.25rem; } }
-      @media screen and (min-width: 1080px) {
-        .cats ul li a {
-          font-size: 1.5rem; } }
-
-button {
-  background-color: transparent;
-  border: 2px solid #0c0;
-  text-shadow: unset;
-  -webkit-box-shadow: unset;
-          box-shadow: unset;
-  padding: .75rem 2.25rem;
-  font-family: Exo, serif;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-top: 3rem;
-  outline: none; }
-  button:focus {
-    outline: none;
-    border-color: initial;
-    -webkit-box-shadow: unset;
-            box-shadow: unset; }
-  button:active {
-    border-color: initial;
-    -webkit-box-shadow: unset;
-            box-shadow: unset; }
-  @media screen and (min-width: 620px) {
-    button {
-      font-size: 1.25rem; } }
-
-.quote-content p {
-  font-size: 1.25rem; }
-  @media screen and (min-width: 620px) {
-    .quote-content p {
-      font-size: 1.75rem; } }
-  @media screen and (min-width: 1080px) {
-    .quote-content p {
-      font-size: 2.5rem; } }
-
-article {
-  font-size: 1.25rem; }
-
-.quote-title {
-  text-align: center; }
-
-.mandatory {
-  color: red; }
-
-.success {
-  color: lightgreen; }
-
-textarea {
-  max-width: 370px; }
-  @media screen and (min-width: 620px) {
-    textarea {
-      width: 100%;
-      max-width: unset; } }
-
-.search-results-title {
-  border-bottom: 1px, white, dotted;
-  padding-bottom: 1.5rem; }
-
-.search-form input {
-  border: 2px solid #00cc00;
-  color: #fff;
-  background-color: transparent;
-  width: 80%;
-  max-width: 240px; }
-  .search-form input:focus {
-    color: inherit; }
-  @media screen and (min-width: 620px) {
-    .search-form input {
-      font-size: 1.25rem; } }
-
-.search-form button {
-  border: 0px;
-  padding: 0px 0px 0px .5rem; }
-  @media screen and (min-width: 620px) {
-    .search-form button {
-      font-size: 1.25rem; } }
-
-.error {
-  color: red;
-  text-transform: uppercase;
-  font-size: 1.25rem; }
-
-.hidden {
-  display: none; }
-
-.category-tag {
-  border-bottom: 1px white dotted;
-  padding-bottom: 3rem; }
-
-.archive-title {
+.logo {
   width: 100%;
-  border-bottom: 1px white dotted;
-  padding-bottom: 2rem; }
+  margin: 4rem 0rem 1rem 0rem;
+  max-width: 500px; }
+  .logo a {
+    width: 100%; }
+  .logo img {
+    width: 100%; }
+  @media screen and (min-width: 1080px) {
+    .logo {
+      max-width: 700px; } }

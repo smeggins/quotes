@@ -1,0 +1,16 @@
+.page {
+
+    h1 {
+        margin-bottom: 0rem;
+    }
+
+    p{
+        @include branded-a;
+        text-align: center;
+        font-weight: normal;
+
+        img {
+            width: 1rem;
+        }
+    }  
+}

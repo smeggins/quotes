@@ -1,0 +1,16 @@
+.mandatory {
+    color: red;
+}
+.success {
+    color: lightgreen;
+}
+
+textarea {
+
+    max-width: 370px;
+
+    @include tablet {
+        width: 100%;
+        max-width: unset;
+    }
+}
