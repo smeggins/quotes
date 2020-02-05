@@ -88,3 +88,16 @@ require get_template_directory() . '/inc/metaboxes.php';
  * Custom WP API modifications.
  */
 require get_template_directory() . '/inc/api.php';
+
+// reduces number of posts in a normal (non admin) post query for categoriess and tags archives to 5 
+
+function category_and_tags_archive( $query ) {
+    if ( ! is_admin() && $query->is_main_query() ) {
+
+        if ( is_category() || is_tag() ) {
+
+            $query->set( 'posts_per_page', 5 );
+		}
+    }
+}
+add_action( 'pre_get_posts', 'category_and_tags_archive' );

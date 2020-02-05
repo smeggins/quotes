@@ -55,12 +55,11 @@
                 data: {
                     title: $('.quoteAuthor').val(),
                     content: $('.quoteContent').val(),
-                    status: 'publish',
+                    status: 'pending',
                 },
 
                 success: function (data) {
                     changeLocation(data.link);
-                    console.log('you did it!')
                 },
                 error: function () {
                     $('#post-error').removeClass('hidden');
