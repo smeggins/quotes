@@ -825,9 +825,6 @@ footer {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
-  @media screen and (min-width: 1080px) {
-    footer {
-      font-size: 1.25rem; } }
 
 .footer-nav a {
   color: #00cc00;
@@ -936,6 +933,9 @@ article {
 .mandatory {
   color: red; }
 
+.success {
+  color: lightgreen; }
+
 textarea {
   max-width: 370px; }
   @media screen and (min-width: 620px) {
@@ -965,3 +965,11 @@ textarea {
   @media screen and (min-width: 620px) {
     .search-form button {
       font-size: 1.25rem; } }
+
+.error {
+  color: red;
+  text-transform: uppercase;
+  font-size: 1.25rem; }
+
+.hidden {
+  display: none; }

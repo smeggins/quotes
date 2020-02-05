@@ -7,7 +7,6 @@
     const changeURL = function (slug) {
         window.history.pushState('', '', `${slug}`);
     }
-
     
     $('#random-quote-button').click(function() {
         
@@ -29,25 +28,49 @@
     });        
 
     $('#submit-quote-button').click(function(homeLocation) {
-            
-        $.ajax({
-            method: 'POST',
-            url: functionVars.quotes_url + 'wp/v2/posts/',
-            
-            data: {
-                title: $('.quoteAuthor').val(),
-                content: $('.quoteContent').val(),
-                status: 'publish',
-            },
 
-            success: function (data) {
-                changeLocation(data.link);
-            },
+        if ($.trim($('.quoteContent').val()) === '') {
+            $('#quoteError').html('<br>* please enter a quote')
+        }
+        else {
+            $('#quoteError').removeClass('mandatory')
+            $('#quoteError').addClass('success')
+            $('#quoteError').html('<br>* success')
+        }
 
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('X-WP-Nonce', functionVars.quotes_nonce);
-                }
-        })
+        if ($.trim($('.quoteAuthor').val()) === '') {
+            $('#authorError').html('<br>* please enter an author')
+        }
+        else {
+            $('#authorError').addClass('success')
+            $('#authorError').html('<br>* success')
+        }
+
+        if ($.trim($('.quoteAuthor').val()) !== '' && $.trim($('.quoteContent').val()) !== '') {
+            
+            $.ajax({
+                method: 'POST',
+                url: functionVars.quotes_url + 'wp/v2/posts/',
+                
+                data: {
+                    title: $('.quoteAuthor').val(),
+                    content: $('.quoteContent').val(),
+                    status: 'publish',
+                },
+
+                success: function (data) {
+                    changeLocation(data.link);
+                    console.log('you did it!')
+                },
+                error: function () {
+                    $('#post-error').removeClass('hidden');
+                },
+
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader('X-WP-Nonce', functionVars.quotes_nonce);
+                    }
+            })
+        }
     })
 
 })(jQuery);

@@ -142,10 +142,6 @@ footer {
         flex-direction: row;
         justify-content: center;
     }
-
-    @include desktop {
-        font-size: 1.25rem;
-    }
 }
 
 .footer-nav {
@@ -296,6 +292,9 @@ article {
 .mandatory {
     color: red;
 }
+.success {
+    color: lightgreen;
+}
 
 textarea {
 
@@ -340,4 +339,14 @@ textarea {
             font-size: 1.25rem;
         }
     }
+}
+
+.error {
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+.hidden {
+    display: none;
 }

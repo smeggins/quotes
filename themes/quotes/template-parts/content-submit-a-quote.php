@@ -14,12 +14,18 @@
     <?php if (is_user_logged_in() == true) { ?>
     <form method="post" class="user-input">
             <div>
-                <p>quote author <span class="mandatory">*</span></p>
+                <p>quote author <span id="authorError"class="mandatory">*</span></p>
                 <input class="quoteAuthor" name="quote_author">
             </div>
-        <p>quote <span class="mandatory">*</span></p>
+        <p>quote <span id="quoteError" class="mandatory">*</span></p>
         <textarea name="quote" class="quoteContent" cols="40" rows="10"></textarea>
     </form>
+
+    <h4 id="post-error" class="error hidden">
+        Post did not submit, please try again later.
+        <br>
+        if error continues please contact a site administrator
+    </h4>
 
     <button type='button' id='submit-quote-button' class="green-branding" >Submit</button>
 
