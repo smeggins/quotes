@@ -721,6 +721,13 @@ ul {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.entry-title, a {
+  color: #00cc00; }
+  .entry-title:active, a:active {
+    color: #00cc00; }
+  .entry-title:visited, a:visited {
+    color: #00cc00; }
+
 #page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,3 +980,12 @@ textarea {
 
 .hidden {
   display: none; }
+
+.category-tag {
+  border-bottom: 1px white dotted;
+  padding-bottom: 3rem; }
+
+.archive-title {
+  width: 100%;
+  border-bottom: 1px white dotted;
+  padding-bottom: 2rem; }

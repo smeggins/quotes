@@ -37,6 +37,18 @@ ul {
     justify-content: center;
 }
 
+.entry-title, a {
+    color: $color__green-branding;
+    
+    &:active {
+        color: $color__green-branding;
+    }
+
+    &:visited {
+        color: $color__green-branding;
+    }
+}
+
 #page {
     display: flex;
     flex-direction: column;
@@ -349,4 +361,17 @@ textarea {
 
 .hidden {
     display: none;
+}
+
+// archive cat and tag
+
+.category-tag {
+    border-bottom: 1px white dotted;
+    padding-bottom: 3rem;
+}
+
+.archive-title {
+    width: 100%;
+    border-bottom: 1px white dotted;
+    padding-bottom: 2rem;
 }
